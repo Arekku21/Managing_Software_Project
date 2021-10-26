@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>PHP Inventory</title>
+		<meta charset="UTF-8">
+		<link href="css/style.css" rel="stylesheet" type="text/css"> 
+	</head>
+
+	<body>
+		
+		<div class="invenform">
+			<h1>Inventory</h1>
+		</div>
+		
+		<div id="form">
+		
+			<form method="post" action="/action_page.php">
+		
+				<label for="uname">User Name:</label>
+				<input type="text" id="uname" name="uname"></input>
+				<label for="uid">User ID:</label>
+				<input type="number" id="uid" name="uid" placeholder="Numbers only!"></input><br><br>
+		
+				<label for="mname">Name of Medication:</label>
+				<input type="text" id="mname" name="mname"></input><br><br>
+		
+				<label for="mdate">Mfg.Date:</label>
+				<input type="date" id="mdate" name="mdate"></input>
+				<label for="edate">Exp.Date:</label>
+				<input type="date" id="edate" name="edate"></input><br><br>
+		
+				<label for="quan">Quantity:</label>
+				<input type="text" id="quan" name="quan" placeholder="Numbers only!"></input><br><br>
+		
+				<label for="uprice">Unit Price:</label>
+				<input type="number" id="uprice" name="uprice" placeholder="Numbers only!"></input>
+				<label for="tprice">Total Price:</label>
+				<input type="number" id="tprice" name="tprice" placeholder="Numbers only!"></input><br><br>
+		
+				<label for="com">Comments:</label>
+				<textarea id="com" name="com" cols="30" rows="5"></textarea><br><br>
+		
+				<button type="submit">Submit</button>
+				<button type="reset">Clear</button>
+			
+			</form>
+
+		</div>
+
+	</body>
+	
+</html>
