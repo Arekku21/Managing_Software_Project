@@ -1,5 +1,4 @@
-function val(){
-	var error= "";
+function val(){ 
 	var regID = /^[a-zA-Z0-9#]+$/;
 	var nonword = /^[a-zA-Z ]+$/;
     var IID = document.getElementById('ItemID').value;
@@ -9,96 +8,141 @@ function val(){
     var Quan = document.getElementById('Quantity').value;
     var EDate = document.getElementById('ExpiryDate').value;
     var Notes = document.getElementById('Note').value;
-	var validation = true;
-    if(!IID){
-        error += "Please fill the Item ID\n";
-        validation = false;
+	var v1,v2,v3,v4,v5,v6,v7 = false;
+    if(!IID){ 
+		document.getElementById('ItemID').placeholder  = "special character is not allowed except #";
+		document.getElementById('ItemID').style.borderColor = "red";
+        v1 = false;
     }  
-    else if(!IID.match(regID)){
-    	error += "The Item ID special symbol and space is not allowed except symbol#\n";
-        validation = false;
+    else if(!IID.match(regID)){ 
+		document.getElementById('ItemID').placeholder  = "special character is not allowed except #";
+		document.getElementById('ItemID').style.borderColor = "red"; 
+        v1 = false;
     }
     else{ 
+		document.getElementById('ItemID').placeholder  = "";
+		document.getElementById('ItemID').style.borderColor = "";
+		v1 = true;
     }
     if(!IName){
         error += "Please fill the Item Name\n";
-        validation = false;
+		document.getElementById('ItemName').placeholder  = "special character is not allowed except #";
+		document.getElementById('ItemName').style.borderColor = "red";
+        v2 = false;
     }    
-    else if(!IName.match(nonword)){
-    	error += "The Item Name number and symbol is not allowed \n";
-        validation = false;
+    else if(!IName.match(nonword)){ 
+		document.getElementById('ItemName').placeholder  = "special character is not allowed except #";
+		document.getElementById('ItemName').style.borderColor = "red";
+        v2 = false;
     }
     else{ 
+		document.getElementById('ItemName').placeholder  = "";
+		document.getElementById('ItemName').style.borderColor = "";
+		v2 = true;
     }
-    if(!SID){
-        error += "Please fill the Supplier ID\n";
-        validation = false;
+    if(!SID){ 
+		document.getElementById('SupplierID').placeholder  = "special character is not allowed except #";
+		document.getElementById('SupplierID').style.borderColor = "red";
+        v3 = false;
     }    
-    else if(!SID.match(regID)){
-    	error += "The supplier ID character, number and symbol # is allowed\n";
-        validation = false;
+    else if(!SID.match(regID)){ 
+		document.getElementById('SupplierID').placeholder  = "special character is not allowed except #";
+		document.getElementById('SupplierID').style.borderColor = "red";
+        v3 = false;
     }
     else{ 
+		document.getElementById('SupplierID').placeholder  = "";
+		document.getElementById('SupplierID').style.borderColor = "";
+		v3 = true;
     }
-    if(!BID){
-        error += "Please fill the Batch ID\n";
-        validation = false;
+    if(!BID){ 
+		document.getElementById('BatchID').placeholder  = "special character is not allowed except #";
+		document.getElementById('BatchID').style.borderColor = "red";
+        v4 = false;
     }   
-    else if(!BID.match(regID)){
-    	error += "The BatchID ID character, number and symbol # is allowed\n";
-        validation = false;
+    else if(!BID.match(regID)){ 
+		document.getElementById('BatchID').placeholder  = "special character is not allowed except #";
+		document.getElementById('BatchID').style.borderColor = "red";
+        v4 = false;
     }
     else{ 
+		document.getElementById('BatchID').placeholder  = "";
+		document.getElementById('BatchID').style.borderColor = "";
+		v4 = true;
     } 
-    if(!Quan){
-        error += "Please fill the Quantity\n";
-        validation =  false;
+    if(!Quan){ 
+		document.getElementById('Quantity').placeholder  = "Please fill the Quantity";
+		document.getElementById('Quantity').style.borderColor = "red";
+        v5 =  false;
     }    
-    if(!EDate){
-        error += "Please fill the Exiry Date\n";
-        validation =  false;
-    }    
-    if(!Notes){
-        error += "Please fill the Note\n";
-        validation =  false;
-    }       
-    if(validation == false){
-    	alert(error);
+	else{
+		document.getElementById('Quantity').placeholder  = "";
+		document.getElementById('Quantity').style.borderColor = "";
+        v5 =  true;
+	}
+    if(!EDate){ 
+		document.getElementById('ExpiryDate').placeholder  = "Please fill the Exiry Date";
+		document.getElementById('ExpiryDate').style.borderColor = "red";
+        v6 =  false;
+    }   
+	else{
+		document.getElementById('ExpiryDate').placeholder  = "";
+		document.getElementById('ExpiryDate').style.borderColor = "";
+		v6 =  true;
+	}
+    if(!Notes){ 
+		document.getElementById('Note').placeholder  = "Please fill the Note";
+		document.getElementById('Note').style.borderColor = "red";
+        v7 =  false;
+    }
+	else{
+		document.getElementById('Note').placeholder  = "";
+		document.getElementById('Note').style.borderColor = "";
+		v7 = true;
+	}
+    if(v1 == false ||v2 == false ||v3 == false ||v4 == false ||v5 == false ||v6 == false ||v7 == false){ 
+		alert('Invalid input, please check your information~');
     	return false;
     }
     else{
     	return true;    // in success case
     }
 }  
-function loginPage(){
-	var error= "";
+function loginPage(){ 
 	var regID = /^[a-zA-Z0-9]+$/;
 	var nonword = /^[a-zA-Z ]+$/;
 	var lUser = document.getElementById('LUsername').value;
 	var lPass = document.getElementById('LPassword').value;	
-	var validation = true;
+	var v1,v2 = false;
 	if(!lUser){
-		error += "Please fill the username ID\n";
-		validation = false;
+		document.getElementById('LUsername').style.placeholder = "symbol is not allowed";
+		document.getElementById('LUsername').style.borderColor = "red";
+		v1 = false;
 	}  
 	else if(!lUser.match(regID)){
-		error += "The Username is not allowed special character\n";
-		validation = false;
+		document.getElementById('LUsername').style.placeholder = "symbol is not allowed";
+		document.getElementById('LUsername').style.borderColor = "red";
+		v1 = false;
 	}
 	else{ 
+		document.getElementById('LUsername').placeholder  = "";
+		document.getElementById('LUsername').style.borderColor = "";
+		v1 = true;
 	}
-	if(!lPass){
-		error += "Please fill the password ID\n";
-		validation = false;
+	if(!lPass){  
+		document.getElementById('LPassword').style.borderColor = "red";
+		v2 = false;
 	}  
-	else if(!lPass.match(regID)){
-		error += "The Username is not allowed special character\n";
-		validation = false;
+	else if(!lPass.match(regID)){  
+		document.getElementById('LPassword').style.borderColor = "red";
+		v2 = false;
 	}
-	else{ 
+	else{  
+		document.getElementById('LPassword').style.borderColor = "";
+		v2 = true;
 	}
-	if(validation == false){
-		alert(error);
+	if(v1 == false || v2 == false){ 
+		alert('Please type the correct username and password');
 		return false;
 	}
 	else{
