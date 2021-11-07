@@ -93,29 +93,20 @@ function loginPage(){
 	var lUser = document.getElementById('LUsername').value;
 	var lPass = document.getElementById('LPassword').value;	
 	var v1,v2 = false;
-	if(!lUser){
+	if(!lUser || !lUser.match(regID)){
 		document.getElementById('LUsername').style.placeholder = "symbol is not allowed";
 		document.getElementById('LUsername').style.borderColor = "red";
 		v1 = false;
-	}  
-	else if(!lUser.match(regID)){
-		document.getElementById('LUsername').style.placeholder = "symbol is not allowed";
-		document.getElementById('LUsername').style.borderColor = "red";
-		v1 = false;
-	}
+	}   
 	else{ 
 		document.getElementById('LUsername').placeholder  = "";
 		document.getElementById('LUsername').style.borderColor = "";
 		v1 = true;
 	}
-	if(!lPass){  
+	if(!lPass || !lPass.match(regID)){  
 		document.getElementById('LPassword').style.borderColor = "red";
 		v2 = false;
-	}  
-	else if(!lPass.match(regID)){  
-		document.getElementById('LPassword').style.borderColor = "red";
-		v2 = false;
-	}
+	}   
 	else{  
 		document.getElementById('LPassword').style.borderColor = "";
 		v2 = true;
