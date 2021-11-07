@@ -9,62 +9,41 @@ function val(){
     var EDate = document.getElementById('ExpiryDate').value;
     var Notes = document.getElementById('Note').value;
 	var v1,v2,v3,v4,v5,v6,v7 = false;
-    if(!IID){ 
+    if(!IID || !IID.match(regID)){ 
 		document.getElementById('ItemID').placeholder  = "special character is not allowed except #";
 		document.getElementById('ItemID').style.borderColor = "red";
         v1 = false;
-    }  
-    else if(!IID.match(regID)){ 
-		document.getElementById('ItemID').placeholder  = "special character is not allowed except #";
-		document.getElementById('ItemID').style.borderColor = "red"; 
-        v1 = false;
-    }
+    }   
     else{ 
 		document.getElementById('ItemID').placeholder  = "";
 		document.getElementById('ItemID').style.borderColor = "";
 		v1 = true;
     }
-    if(!IName){
-        error += "Please fill the Item Name\n";
+    if(!IName || !IName.match(nonword)){ 
 		document.getElementById('ItemName').placeholder  = "special character is not allowed except #";
 		document.getElementById('ItemName').style.borderColor = "red";
         v2 = false;
-    }    
-    else if(!IName.match(nonword)){ 
-		document.getElementById('ItemName').placeholder  = "special character is not allowed except #";
-		document.getElementById('ItemName').style.borderColor = "red";
-        v2 = false;
-    }
+    }     
     else{ 
 		document.getElementById('ItemName').placeholder  = "";
 		document.getElementById('ItemName').style.borderColor = "";
 		v2 = true;
     }
-    if(!SID){ 
+    if(!SID || !SID.match(regID)){ 
 		document.getElementById('SupplierID').placeholder  = "special character is not allowed except #";
 		document.getElementById('SupplierID').style.borderColor = "red";
         v3 = false;
     }    
-    else if(!SID.match(regID)){ 
-		document.getElementById('SupplierID').placeholder  = "special character is not allowed except #";
-		document.getElementById('SupplierID').style.borderColor = "red";
-        v3 = false;
-    }
     else{ 
 		document.getElementById('SupplierID').placeholder  = "";
 		document.getElementById('SupplierID').style.borderColor = "";
 		v3 = true;
     }
-    if(!BID){ 
+    if(!BID || !BID.match(regID)){ 
 		document.getElementById('BatchID').placeholder  = "special character is not allowed except #";
 		document.getElementById('BatchID').style.borderColor = "red";
         v4 = false;
     }   
-    else if(!BID.match(regID)){ 
-		document.getElementById('BatchID').placeholder  = "special character is not allowed except #";
-		document.getElementById('BatchID').style.borderColor = "red";
-        v4 = false;
-    }
     else{ 
 		document.getElementById('BatchID').placeholder  = "";
 		document.getElementById('BatchID').style.borderColor = "";
