@@ -119,3 +119,88 @@ function loginPage(){
 		return true;    // in success case
 	}
 }
+
+// Sales Add validation
+function Salesval(){ 
+	var regID = /^[0-9]+$/;
+	var nonchar = /^[a-zA-Z]+$/;
+	var nonnumber = /^[0-9.]+$/;
+    var SID = document.getElementById('SalesID').value; 
+    var SD = document.getElementById('SDate').value; 
+    var TA = document.getElementById('TAmount').value; 
+    var PT = document.getElementById('PType').value; 
+    var D = document.getElementById('Discount').value; 
+    var PA = document.getElementById('PAmount').value; 
+    var RA = document.getElementById('RAmount').value; 
+	
+	var v1,v2,v3,v4,v5,v6,v7 = false;
+    if(!SID || !SID.match(regID)){ 
+		document.getElementById('SalesID').value  = "only 0-9 is allowed";
+		document.getElementById('SalesID').style.borderColor = "red";
+        v1 = false;
+    }   
+    else{  
+		document.getElementById('SalesID').style.borderColor = "";
+		v1 = true;
+    }
+    if(!SD){  
+		document.getElementById('SDate').style.borderColor = "red";
+        v2 =  false;
+    }   
+	else{ 
+		document.getElementById('SDate').style.borderColor = "";
+		v2 =  true;
+	}
+    if(!TA || !TA.match(nonnumber)){ 
+		document.getElementById('TAmount').value  = "only allowed number";
+		document.getElementById('TAmount').style.borderColor = "red";
+        v3 = false;
+    }    
+    else{  
+		document.getElementById('TAmount').style.borderColor = "";
+		v3 = true;
+    }
+    if(!PT || !PT.match(nonchar)){ 
+		document.getElementById('PType').value  = "only allowed character";
+		document.getElementById('PType').style.borderColor = "red";
+        v4 = false;
+    }   
+    else{  
+		document.getElementById('PType').style.borderColor = "";
+		v4 = true;
+    }
+    if(!D || !D.match(regID) ){ 
+		document.getElementById('Discount').value  = "only allowed number";
+		document.getElementById('Discount').style.borderColor = "red";
+        v5 =  false;
+    }    
+	else{ 
+		document.getElementById('Discount').style.borderColor = "";
+        v5 =  true;
+	} 
+    if(!PA|| !PA.match(nonnumber)){ 
+		document.getElementById('PAmount').value  = "only allowed number";
+		document.getElementById('PAmount').style.borderColor = "red";
+        v6 =  false;
+    }   
+	else{ 
+		document.getElementById('PAmount').style.borderColor = "";
+		v6 =  true;
+	} 
+    if(!RA|| !RA.match(nonnumber)){ 
+		document.getElementById('RAmount').value  = "only allowed number";
+		document.getElementById('RAmount').style.borderColor = "red";
+        v7 =  false;
+    }
+	else{ 
+		document.getElementById('RAmount').style.borderColor = "";
+		v7 = true;
+	} 
+    if(v1 == false || v2 == false || v3 == false || v4 == false || v5 == false || v6 == false || v7 == false){ 
+		alert('Invalid input, please check your information~');
+    	return false;
+    }
+    else{
+    	return true;    // in success case
+    }  
+}  
