@@ -2,12 +2,12 @@ Create	database if not exists MSP;
 use MSP;
 set autocommit = false;
 
-# if using the old database please run these two lines below first
+-- if using the old database please run these two lines below first
 drop table users;
 drop table inventory;
 
 
-## User Module
+-- User Module --
 CREATE TABLE IF NOT EXISTS Employee (
     EmployeeID INT(10) NOT NULL AUTO_INCREMENT,
     firstName VARCHAR(255) NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Customer (
     PRIMARY KEY (CustomerID)
 );
 
-## Inventory Module
+-- Inventory Module --
 CREATE TABLE IF NOT EXISTS Drug (
     DrugID INT(10) NOT NULL AUTO_INCREMENT,
     drugName VARCHAR(255) NOT NULL,
@@ -63,8 +63,8 @@ CREATE TABLE IF NOT EXISTS storedDrug (
     PRIMARY KEY (batchNo)
 );
 
-## Sales Module
-# This is for Supplier
+-- Sales Module --
+-- This is for Supplier
 CREATE TABLE IF NOT EXISTS Purchase_Invoice (
 	purchaseInvoiceID int(10) not null auto_increment,
     purchaseDate date not null,
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS Purchase_Invoice (
     primary key (purchaseInvoiceID)
 );
 
-# This is for Customers
+-- This is for Customers
 CREATE TABLE IF NOT EXISTS Sale_Invoice (
 	saleInvoiceID int(10) not null auto_increment,
     saleDate datetime,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS Sale_Invoice (
     primary key (saleInvoiceID)
 );
 
-## Supplier Module
+-- Supplier Module
 CREATE TABLE IF NOT EXISTS Supplier (
     SupplierID INT(10) NOT NULL AUTO_INCREMENT,
     companyName VARCHAR(255) NOT NULL,
