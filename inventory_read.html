@@ -64,37 +64,9 @@
 		<textarea name="Note" id="name" cols="43" rows="4"></textarea>
 		<br><br> -->
 		
-		<h2>Add Inventory</h2>
+		<h2>Read Inventory: Click submit to see details</h2>
 		
-		<form id="register" method="post" onsubmit="return val()" action="inventory_add.php">
-			<label for="ItemID"> Item ID: </label>
-			<input type="text" id="ItemID" name="ItemID"></input><br>  
-			<br><br>
-
-			<label for="ItemID"> Item Name: </label>
-			<input type="text" id="ItemName" name="ItemName"></input><br>
-			<br><br>
-
-			<label for="SupplierID"> Supplier ID: </label> 
-			<input type="text" id="SupplierID" name="SupplierID"></input><br>  
-			<br><br>
-
-			<label for="BatchID"> BatchID: </label> 
-			<input type="text" id="BatchID" name="BatchID"></input><br>
-			<br><br> 
-
-			<label for="Quantity"> Quantity: </label>
-			<input type="number" id="Quantity" name="Quantity"></input><br> 
-			<br><br>  
-
-			<label for="ExpiryDate"> ExpiryDate: </label>
-			<input type="date" id="ExpiryDate" name="ExpiryDate"></input><br> 
-			<br><br>
-
-			<label for="Note"> Notes: </label>
-			<textarea id="Note" name="Note" cols="30" rows="4"></textarea><br> 
-			<br><br>
-
+		<form id="register" method="post" action="inventory_read.php">
 			<input type="submit" value="Submit" name="submit">
 		</form>
 		
