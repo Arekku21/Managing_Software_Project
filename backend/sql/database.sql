@@ -83,10 +83,10 @@ CREATE TABLE IF NOT EXISTS Sale_Invoice (
     saleDate datetime,
     totalAmount int(10),
     paymentType ENUM('cash','credit','debit','cheque','mobile','eft'),
-    Discount decimal(3,2),
+    Discount int,
     payedAmount int(10),
     remainingAmount int(10),
-	constraint Discount_valid check (Discount between 0 and 1),
+	constraint Discount_valid check (Discount between 0 AND 100),
     primary key (saleInvoiceID)
 );
 
