@@ -66,27 +66,27 @@ CREATE TABLE IF NOT EXISTS storedDrug (
 -- Sales Module --
 -- This is for Supplier
 CREATE TABLE IF NOT EXISTS Purchase_Invoice (
-	purchaseInvoiceID int(10) not null auto_increment,
+	purchaseInvoiceID INT(10) NOT NULL AUTO_INCREMENT,
     purchaseDate date not null,
-    totalAmount int(10),
+    totalAmount INT(10),
     paymentType ENUM('cash','credit','debit','cheque','mobile','eft'),
-    Discount decimal(3,2),
-    payedAmount int(10),
-    remainingAmount int(10),
-	constraint Discount_valid check (Discount between 0 and 1),
+    Discount INT(10) DEFAULT 0,
+    payedAmount INT(10),
+    remainingAmount INT(10),
+	constraint Discount_valid check (Discount between 0 and 100),
     primary key (purchaseInvoiceID)
 );
 
 -- This is for Customers
 CREATE TABLE IF NOT EXISTS Sale_Invoice (
-	saleInvoiceID int(10) not null auto_increment,
-    saleDate datetime,
-    totalAmount int(10),
+	saleInvoiceID INT(10) NOT NULL AUTO_INCREMENT,
+    saleDate date not null,
+    totalAmount INT(10),
     paymentType ENUM('cash','credit','debit','cheque','mobile','eft'),
-    Discount decimal(3,2),
-    payedAmount int(10),
-    remainingAmount int(10),
-	constraint Discount_valid check (Discount between 0 and 1),
+    Discount INT(10) DEFAULT 0,
+    payedAmount INT(10),
+    remainingAmount INT(10),
+	constraint Discount_valid check (Discount between 0 AND 100),
     primary key (saleInvoiceID)
 );
 

@@ -24,6 +24,7 @@
 				<li><a href="#">Inventory</a></li>
 				<li><a href="#">Products</a></li>
 				<li><a href="#">Sales</a></li>
+				<li><a href="#">Supplier</a></li>
 				<li><a href="#">About Us</a></li>
 				<li><a href="#">Contact Us</a></li>
 			
@@ -37,38 +38,10 @@
 	<div class="main">
 			
 	<div class="register"> 
-		<h2>Add Sales Invoice</h2>
+		<h2>Click Submit to show users</h2>
 		
-		<form id="register" method="post" onsubmit="return Salesval()" action="Sales_Add.php">
-			<label for="SalesID"> Sales Invoice ID: </label>
-			<input type="text" id="SalesID" name="SalesID"></input><br>  
-			<br><br>
-			
-			<label for="SDate"> Date: </label>
-			<input type="date" id="SDate" name="SDate"></input><br>
-			<br><br>
-			
-			<label for="TAmount"> Total Amount: </label> 
-			<input type="text" id="TAmount" name="TAmount"></input><br>  
-			<br><br>
-
-			<label for="PType"> Payment Type: </label> 
-			<input type="text" id="PType" name="PType"></input><br>
-			<br><br> 
-
-			<label for="Discount"> Discount: </label>
-			<input type="number" id="Discount" name="Discount"></input><br> 
-			<br><br>  
-
-			<label for="PAmount"> Payed Amount: </label>
-			<input type="text" id="PAmount" name="PAmount"></input><br> 
-			<br><br>
- 
-			<label for="RAmount"> Remaining Amount: </label> 
-			<input type="text" id="RAmount" name="RAmount"></input><br> 
-			<br><br>
-
-			<input type="submit" value="Submit" name="submit">
+		<form name="loginForm" action="loginPage_read.php" method="post">
+			<input type="submit" name="submit" value="Submit">
 		</form>
 		
 	</div>
@@ -102,3 +75,20 @@
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
