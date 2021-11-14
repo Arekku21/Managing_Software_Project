@@ -58,27 +58,20 @@
  	 </div> 
   	<a href="Logout.php">Logout</a> 
 	</div>
+	
 	<div class="main">
 			
 	<div class="register"> 
-		<h2>Add Reminders</h2>
+		<h2>Login</h2>
 		
-		<form id="register" method="post" onsubmit="return Reminderval()" action="">
-			<label for="ReminderName"> Title: </label>
-			<input type="text" id="ReminderName" name="ReminderName"></input><br>  
-			<br><br>  
-
-			<label for="Description"> Description: </label>
-			<input type="text" id="Description" name="Description"></input><br> 
-			<br><br>  
-
-			<label for="DateTime"> Date Time: </label>
-			<input type="datetime-local" id="DateTime" name="DateTime"></input><br> 
-			<br><br> 
-			
-			<input type="submit" value="Submit" name="submit" class="Button">
+		<form id="register" name="loginForm" action="loginPage_add.php" method="post" onsubmit="return loginPage()">
+			<label for="LUsername"> Username: </label>
+			<input type="text" id="LUsername" name="LUsername" class="font"/><br><br> 
+			<label for="LPassword"> Password: </label>
+			<input type="password" id="LPassword" name="LPassword" class="font"/><br><br> 
+			<input type="submit" name="submit" value="Log in" class="Button">
 		</form>
-		
+
 	</div>
 	
 	</div>
@@ -110,3 +103,20 @@
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
