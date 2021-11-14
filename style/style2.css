@@ -1,6 +1,6 @@
 body{
 	
-	background-image: url('../images/phps.jpg');
+	background-image: url('../image/php1.jpg');
 	background-size: cover;	
 	
 }
@@ -75,7 +75,7 @@ h2{
 div.register{
 	
 	background-color: rgba(0,0,0,0.5);
-	width: 100%;
+	width: 100%:
 	font-size: 18px;
 	border-radius: 10px;
 	border: 1px solid rgba(255,255,255,0.3);
@@ -98,7 +98,7 @@ label{
 	
 }
 
-input#name{
+input.font{
 	
 	width: 300px;
 	border: 1px solid #ddd;
@@ -110,7 +110,7 @@ input#name{
 	
 }
 
-input#submit{
+input.Button{
 	
 	width: 200px;
 	padding: 7px;
@@ -124,6 +124,14 @@ input#submit{
 	cursor: pointer;
 	border: 1px solid rgba(255,255,255,0.3);
 	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	
+}
+
+.center{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	
 }
 

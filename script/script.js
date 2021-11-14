@@ -118,6 +118,7 @@ function loginPage(){
 	else{
 		return true;    // in success case
 	}
+	
 }
 
 // Sales Add validation
@@ -205,9 +206,7 @@ function Salesval(){
     }  
 }  
 
-// Supplier validation
 function Supval(){
-	
 	var regID = /^[0-9]+$/;
 	var nonchar = /^[a-zA-Z ]+$/;
 	var nonnumber = /^[0-9-]+$/;
