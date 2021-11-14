@@ -125,8 +125,7 @@ function loginPage(){
 function Salesval(){ 
 	var regID = /^[0-9]+$/;
 	var nonchar = /^[a-zA-Z]+$/;
-	var nonnumber = /^[0-9.]+$/;
-    var SID = document.getElementById('SalesID').value; 
+	var nonnumber = /^[0-9.]+$/;  
     var SD = document.getElementById('SDate').value; 
     var TA = document.getElementById('TAmount').value; 
     var PT = document.getElementById('PType').value; 
@@ -134,16 +133,7 @@ function Salesval(){
     var PA = document.getElementById('PAmount').value; 
     var RA = document.getElementById('RAmount').value; 
 	
-	var v1,v2,v3,v4,v5,v6,v7 = false;
-    if(!SID || !SID.match(regID)){ 
-		document.getElementById('SalesID').value  = "only 0-9 is allowed";
-		document.getElementById('SalesID').style.borderColor = "red";
-        v1 = false;
-    }   
-    else{  
-		document.getElementById('SalesID').style.borderColor = "";
-		v1 = true;
-    }
+	var v2,v3,v4,v5,v6,v7 = false; 
     if(!SD){  
 		document.getElementById('SDate').style.borderColor = "red";
         v2 =  false;
@@ -197,7 +187,7 @@ function Salesval(){
 		document.getElementById('RAmount').style.borderColor = "";
 		v7 = true;
 	} 
-    if(v1 == false || v2 == false || v3 == false || v4 == false || v5 == false || v6 == false || v7 == false){ 
+    if(v2 == false || v3 == false || v4 == false || v5 == false || v6 == false || v7 == false){ 
 		alert('Invalid input, please check your information~');
     	return false;
     }
@@ -212,23 +202,13 @@ function Supval(){
 	var nonnumber = /^[0-9-]+$/;
 	var nonchar = /^[a-zA-Z ]+$/;
 	var nonaddress = /^[a-zA-Z0-9\s,'-]*$/;
-	var nonemail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var SID = document.getElementById('SupplierID').value; 
+	var nonemail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
     var CName = document.getElementById('CompanyName').value;
     var MPhone = document.getElementById('MobilePhone').value; 
     var EmailAdd = document.getElementById('EmailAddress').value;  
     var Add = document.getElementById('Address').value; 
     var City = document.getElementById('City').value;  
-	var v1,v2,v3,v4,v5,v6 = false;
-    if(!SID || !SID.match(regID)){ 
-		document.getElementById('SupplierID').value  = "only 0-9 is allowed";
-		document.getElementById('SupplierID').style.borderColor = "red";
-        v1 = false;
-    }   
-    else{  
-		document.getElementById('SupplierID').style.borderColor = "";
-		v1 = true;
-    }
+	var v2,v3,v4,v5,v6 = false; 
     if(!CName || !CName.match(nonchar)){ 
 		document.getElementById('CompanyName').value  = "only char and space is allowed";
 		document.getElementById('CompanyName').style.borderColor = "red";
@@ -274,7 +254,7 @@ function Supval(){
 		document.getElementById('City').style.borderColor = "";
 		v6 = true;
     }
-    if(v1 == false || v2 == false || v3 == false || v4 == false|| v5 == false || v6 == false){ 
+    if(v2 == false || v3 == false || v4 == false|| v5 == false || v6 == false){ 
 		alert('Invalid input, please check your information~');
     	return false;
     }

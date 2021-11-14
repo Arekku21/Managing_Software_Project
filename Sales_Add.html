@@ -64,11 +64,7 @@
 	<div class="register"> 
 		<h2>Add Sales Invoice</h2>
 		
-		<form id="register" method="post" onsubmit="return Salesval()" action="Sales_Add.php">
-			<label for="SalesID"> Sales Invoice ID: </label>
-			<input type="text" id="SalesID" name="SalesID" class="font"></input><br>
-			<br><br>
-			
+		<form id="register" method="post" onsubmit="return Salesval()" action="Sales_Add.php"> 
 			<label for="SDate"> Date: </label>
 			<input type="date" id="SDate" name="SDate" class="font"></input><br>
 			<br><br>
@@ -78,7 +74,14 @@
 			<br><br>
 
 			<label for="PType"> Payment Type: </label> 
-			<input type="text" id="PType" name="PType" class="font"></input><br>
+			<select name="PType" id="PType" class="font"> 
+  				<option value="cash">cash</option>
+  				<option value="credit">credit</option>
+  				<option value="debit">debit</option>
+  				<option value="cheque">cheque</option>
+  				<option value="mobile">mobile</option>
+  				<option value="eft">eft</option>
+			</select>
 			<br><br> 
 
 			<label for="Discount"> Discount: </label>
