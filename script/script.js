@@ -204,3 +204,126 @@ function Salesval(){
     	return true;    // in success case
     }  
 }  
+
+// Supplier validation
+function Supval(){
+	
+	var regID = /^[0-9]+$/;
+	var nonchar = /^[a-zA-Z ]+$/;
+	var nonnumber = /^[0-9-]+$/;
+	var nonchar = /^[a-zA-Z ]+$/;
+	var nonaddress = /^[a-zA-Z0-9\s,'-]*$/;
+	var nonemail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var SID = document.getElementById('SupplierID').value; 
+    var CName = document.getElementById('CompanyName').value;
+    var MPhone = document.getElementById('MobilePhone').value; 
+    var EmailAdd = document.getElementById('EmailAddress').value;  
+    var Add = document.getElementById('Address').value; 
+    var City = document.getElementById('City').value;  
+	var v1,v2,v3,v4,v5,v6 = false;
+    if(!SID || !SID.match(regID)){ 
+		document.getElementById('SupplierID').value  = "only 0-9 is allowed";
+		document.getElementById('SupplierID').style.borderColor = "red";
+        v1 = false;
+    }   
+    else{  
+		document.getElementById('SupplierID').style.borderColor = "";
+		v1 = true;
+    }
+    if(!CName || !CName.match(nonchar)){ 
+		document.getElementById('CompanyName').value  = "only char and space is allowed";
+		document.getElementById('CompanyName').style.borderColor = "red";
+        v2 = false;
+    }   
+    else{  
+		document.getElementById('CompanyName').style.borderColor = "";
+		v2 = true;
+    }
+    if(!MPhone || !MPhone.match(nonnumber)){ 
+		document.getElementById('MobilePhone').value  = "only number and - is allowed";
+		document.getElementById('MobilePhone').style.borderColor = "red";
+        v3 = false;
+    }   
+    else{  
+		document.getElementById('MobilePhone').style.borderColor = "";
+		v3 = true;
+    }
+    if(!EmailAdd || !EmailAdd.match(nonemail)){ 
+		document.getElementById('EmailAddress').value  = "Please follow email format";
+		document.getElementById('EmailAddress').style.borderColor = "red";
+        v4 = false;
+    }   
+    else{  
+		document.getElementById('EmailAddress').style.borderColor = "";
+		v4 = true;
+    }
+    if(!Add || !Add.match(nonaddress)){ 
+		document.getElementById('Address').value  = "only character is allowed";
+		document.getElementById('Address').style.borderColor = "red";
+        v5 = false;
+    }   
+    else{  
+		document.getElementById('Address').style.borderColor = "";
+		v5 = true;
+    }
+    if(!City || !City.match(nonchar)){ 
+		document.getElementById('City').value  = "only character is allowed";
+		document.getElementById('City').style.borderColor = "red";
+        v6 = false;
+    }   
+    else{  
+		document.getElementById('City').style.borderColor = "";
+		v6 = true;
+    }
+    if(v1 == false || v2 == false || v3 == false || v4 == false|| v5 == false || v6 == false){ 
+		alert('Invalid input, please check your information~');
+    	return false;
+    }
+    else{
+    	return true;    // in success case
+    }  
+}
+
+// Reminder validation
+function Reminderval(){
+	
+	var nonchar = /^[a-zA-Z0-9 ]+$/;
+    var RName = document.getElementById('ReminderName').value; 
+    var Desc = document.getElementById('Description').value;
+    var DTime = document.getElementById('DateTime').value;  
+	 
+	var v1,v2,v3 = false;
+	
+    if(!RName || !RName.match(nonchar)){  
+		document.getElementById('ReminderName').value  = "symbol is not allowed";
+		document.getElementById('ReminderName').style.borderColor = "red";
+		v1 = false;
+	}
+	else{ 
+		document.getElementById('ReminderName').style.borderColor = "";
+		v1 = true;
+	}
+    if(!Desc){   
+		document.getElementById('Description').style.borderColor = "red";
+		v2 = false;
+	}
+	else{ 
+		document.getElementById('Description').style.borderColor = "";
+		v2 = true;
+	}
+    if(!DateTime){   
+		document.getElementById('DateTime').style.borderColor = "red";
+		v3 = false;
+	}
+	else{ 
+		document.getElementById('DateTime').style.borderColor = "";
+		v3 = true;
+	}
+    if(v1 == false || v2 == false || v3 == false){ 
+		alert('Invalid input, please check your information~');
+    	return false;
+    }
+    else{
+    	return true;    // in success case
+    }  
+}
