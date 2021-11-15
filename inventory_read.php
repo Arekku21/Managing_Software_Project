@@ -27,7 +27,7 @@ if(isset($_POST['submit']))
 		  $data[$counter][5] = $row["itemexpiry"];
 		  $data[$counter][6] = $row["itemnote"];
 		  $counter += 1;
-		//echo "<br><br>itemid: " . $row["itemid"]. " <br> itemname: " . $row["itemname"]. " <br> supplierid: " . $row["supplierid"]. " <br> batchid: " . $row["batchid"]. " <br> itemquantity: " . $row["itemquantity"]. " <br> itemexpiry: " . $row["itemexpiry"]. " <br> itemnote: " . $row["itemnote"];	
+		echo "<br><br>itemid: " . $row["itemid"]. " <br> itemname: " . $row["itemname"]. " <br> supplierid: " . $row["supplierid"]. " <br> batchid: " . $row["batchid"]. " <br> itemquantity: " . $row["itemquantity"]. " <br> itemexpiry: " . $row["itemexpiry"]. " <br> itemnote: " . $row["itemnote"];	
 	  }
 	  
 	  foreach ($data as $row) {
