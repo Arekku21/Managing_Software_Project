@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS Sale_Invoice (
     primary key (saleInvoiceID)
 );
 
--- Supplier Module
+-- Supplier Module --
 CREATE TABLE IF NOT EXISTS Supplier (
     SupplierID INT(10) NOT NULL AUTO_INCREMENT,
     companyName VARCHAR(255) NOT NULL,
@@ -99,6 +99,14 @@ CREATE TABLE IF NOT EXISTS Supplier (
     supplierAddress VARCHAR(255),
     City VARCHAR(255),
     PRIMARY KEY (SupplierID)
+);
+
+-- Reminder Module --
+CREATE TABLE IF NOT EXISTS Reminder(
+	Title VARCHAR(20),
+	Description VARCHAR(50) NOT NULL,
+	Date_Time DATETIME,
+	PRIMARY KEY (Title)
 );
 
 
