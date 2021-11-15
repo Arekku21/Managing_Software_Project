@@ -1,0 +1,2 @@
+SaleInvoiceID,SaleDate,TotalAmount,PaymentType,Discount,PayedAmount,RemainingAmount
+124,"2021-11-05 00:00:00",1000,500,100
