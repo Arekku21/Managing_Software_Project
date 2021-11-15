@@ -1,2 +1,6 @@
 UserID,UserRole,UserName,UserPassword,CreatedAt
 36,regular,mubin,zeroonetwo,"2021-11-15 10:47:56"
+<<<<<<< HEAD
+37,regular,ahmed,twothreefour,"2021-11-15 18:28:50"
+=======
+>>>>>>> 742acbcce634474c8fa5bd5a31d325f2725de98c
