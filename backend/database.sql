@@ -6,7 +6,6 @@ set autocommit = false;
 drop table users;
 drop table inventory;
 
-
 -- User Module --
 CREATE TABLE IF NOT EXISTS Employee (
     EmployeeID INT(10) NOT NULL AUTO_INCREMENT,
